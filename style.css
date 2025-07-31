@@ -1,4 +1,37 @@
-html {
-  height: 100%;
-  width: 100%;
+/* Gaya dasar untuk seluruh halaman */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: #222;
+  padding: 30px;
+}
+
+/* Gaya untuk nama (judul utama) */
+h1 {
+  color: #2b2d42;
+  font-size: 36px;
+}
+
+/* Gaya untuk profesi (judul kecil) */
+h2 {
+  color: #8d99ae;
+  font-size: 24px;
+}
+
+/* Gaya untuk teks paragraf */
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Gaya untuk link navigasi */
+nav a {
+  text-decoration: none;
+  margin-right: 15px;
+  color: #1a73e8;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
