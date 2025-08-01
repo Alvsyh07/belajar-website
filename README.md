@@ -26,5 +26,8 @@ Update project untuk menyelesaikan tugas hari ke-4:
 - Commit dan push ke GitHub
 
 ✅ Siap dipresentasikan dan disubmit!
+## Tugas Day 5
+## 🔗 Live Preview
+[Klik untuk lihat website](https://belajar-website-xi.vercel.app/)
 
 
