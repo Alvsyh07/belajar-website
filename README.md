@@ -16,15 +16,14 @@ Saya adalah mahasiswa program Santren Koding dan freelance staff di Ara Tour and
 - HTML & CSS dasar
 - Markdown untuk dokumentasi
 
-## Tujuan
-## Tugas Day 4 - Bearmentor Bootcamp
+## Progress Styling (Day 6)
 
-Update project untuk menyelesaikan tugas hari ke-4:
-- Memakai Git & GitHub
-- Menulis README.md dengan Markdown
-- Mengelola file lewat terminal
-- Commit dan push ke GitHub
+- menambah file `style.css` untuk custom styling
+- Gaya warna, font, dan spacing diperbaiki
+- Layout ditengahin memakai `flexbox`
+- Tambah foto profil di atas nama
+- Link About, Portfolio, Contact ditata rapi
 
-✅ Siap dipresentasikan dan disubmit!
+
 
 
