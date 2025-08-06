@@ -1,30 +1,41 @@
-# Website Pribadi - Alvisyahputra
+# 🌐 Personal Website - Alvisyahputra
 
-Ini adalah website pribadi saya untuk memperkenalkan diri secara profesional.
+Halo! Saya Alvisyahputra, mahasiswa program **Santren Koding**, yang juga bekerja sebagai staff freelance di **Ara Tour and Travel**. Website ini dibuat sebagai bagian dari tugas Project 1 di bootcamp **Santren Koding**
 
-## Tentang Saya
-Saya adalah mahasiswa program Santren Koding dan freelance staff di Ara Tour and Travel. Saya juga aktif sebagai konten kreator di Instagram @explorinwae_, dengan fokus konten jalan-jalan dan edukasi ringan.
+---
 
-## Isi Website
-- Halaman Home (profil singkat)
-- About (cerita lengkap tentang saya)
-- Portfolio (proyek dan aktivitas saya)
-- Contact (tautan media sosial)
+## ✨ Fitur Website
 
-## Tools yang Dipakai
-- Replit (online code editor)
-- HTML & CSS dasar
-- Markdown untuk dokumentasi
+- Menggunakan Tailwind CSS untuk styling
+- Navigasi aktif (Home, About, Portfolio, Contact)
+- Tampilan responsif di berbagai perangkat
+- Konten personal yang mencerminkan latar belakang & pengalaman
 
-## Progress Styling (Day 6)
+---
 
-- menambah file `style.css` untuk custom styling
-- Gaya warna, font, dan spacing diperbaiki
-- Layout ditengahin memakai `flexbox`
-- Tambah foto profil di atas nama
-- Link About, Portfolio, Contact ditata rapi
+## 🛠️ Tools & Teknologi
+
+- HTML
+- Tailwind CSS
+- Git & GitHub
+- Replit
+- Vercel (untuk hosting)
+
+---
+
+## 📁 Struktur Navigasi
+
+| Halaman | Isi |
+|---------|-----|
+| Home | Foto profil & deskripsi singkat |
+| About | Biodata dan motivasi belajar |
+| Portfolio | Riwayat pendidikan & pengalaman organisasi |
+| Contact | Link Instagram, Email, WhatsApp |
+
+---
 
 
+## 🙏 Terima Kasih
 
-
+Project ini dibuat sebagai bentuk pembelajaran dan latihan mandiri dalam program Bearmentor & Santren Koding. Terima kasih untuk para mentor dan teman-teman atas bimbingan dan dukungannya.
 
