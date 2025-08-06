@@ -33,9 +33,13 @@ Halo! Saya Alvisyahputra, mahasiswa program **Santren Koding**, yang juga bekerj
 | Contact | Link Instagram, Email, WhatsApp |
 
 ---
+## 🔗 Link Terkait
 
+🌍 Deploy Website: [https://alvsyhptr-web.vercel.app](https://alvsyhptr-web.vercel.app)
 
+💻 Repository GitHub: [https://github.com/Alvsyh07/belajar-website](https://github.com/Alvsyh07/belajar-website)
+
+---
 ## 🙏 Terima Kasih
 
 Project ini dibuat sebagai bentuk pembelajaran dan latihan mandiri dalam program Bearmentor & Santren Koding. Terima kasih untuk para mentor dan teman-teman atas bimbingan dan dukungannya.
-
