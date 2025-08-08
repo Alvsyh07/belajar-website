@@ -23,16 +23,6 @@ Halo! Saya Alvisyahputra, mahasiswa program **Santren Koding**, yang juga bekerj
 
 ---
 
-## 📁 Struktur Navigasi
-
-| Halaman | Isi |
-|---------|-----|
-| Home | Foto profil & deskripsi singkat |
-| About | Biodata dan motivasi belajar |
-| Portfolio | Riwayat pendidikan & pengalaman organisasi |
-| Contact | Link Instagram, Email, WhatsApp |
-
----
 ## 🔗 Link Terkait
 
 🌍 Deploy Website: [https://alvsyhptr-web.vercel.app](https://alvsyhptr-web.vercel.app)
@@ -40,6 +30,8 @@ Halo! Saya Alvisyahputra, mahasiswa program **Santren Koding**, yang juga bekerj
 💻 Repository GitHub: [https://github.com/Alvsyh07/belajar-website](https://github.com/Alvsyh07/belajar-website)
 
 ---
-## 🙏 Terima Kasih
+## 🔨 Update Terbaru
 
-Project ini dibuat sebagai bentuk pembelajaran dan latihan mandiri dalam program Bearmentor & Santren Koding. Terima kasih untuk para mentor dan teman-teman atas bimbingan dan dukungannya.
+- Menambahkan section Portfolio dengan card berisi riwayat pendidikan, pengalaman organisasi, dan pekerjaan saat ini.
+- Memasukkan gambar pendukung di setiap card untuk memperjelas informasi.
+- Mengatur layout card agar tetap responsif dan selaras dengan desain website.
