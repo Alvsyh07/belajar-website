@@ -165,5 +165,55 @@
       });
     </script>
     <script src="script.js"></script>
+    <section id="day13-demo" style="margin:2rem 0; padding:1rem; border:1px solid #ddd; border-radius:12px;">
+      <h2>Day 13 Demo: Error Handling</h2>
+
+      <label for="username">Nama:</label>
+      <input id="username" type="text" placeholder="Masukkan nama" style="padding:0.5rem; margin:0 0.5rem 0 0;">
+      <button id="saveUserBtn" type="button" style="padding:0.55rem 0.9rem;">Simpan</button>
+
+      <p id="errorBox" aria-live="polite" style="display:none; margin-top:0.75rem;"></p>
+    </section>
+    <script>
+    (function(){
+      const input = document.getElementById('username');
+      const btn   = document.getElementById('saveUserBtn');
+      const err   = document.getElementById('errorBox');
+
+      if(!input || !btn || !err) return;
+
+      function showError(msg){
+        err.style.display = 'block';
+        err.textContent = msg;
+        err.setAttribute('role','alert');
+      }
+
+      function clearError(){
+        err.textContent = '';
+        err.style.display = 'none';
+        err.removeAttribute('role');
+      }
+
+      btn.addEventListener('click', () => {
+        console.clear();
+        try {
+          clearError();
+          const value = (input.value || '').trim();
+          if(value === ''){
+            const e = new Error('Nama tidak boleh kosong.');
+            e.name = 'ValidationError';
+            throw e;
+          }
+          console.log('Nama valid:', value);
+          alert(`Halo, ${value}! (nanti bisa kita simpan ke storage)`);
+        } catch(e){
+          console.warn('Terjadi error:', e.name);
+          showError(e.message);
+        } finally {
+          console.log('Selesai (try/catch/finally).');
+        }
+      });
+    })();
+    </script>
 </body>
 </html>
