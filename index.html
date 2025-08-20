@@ -174,46 +174,118 @@
 
       <p id="errorBox" aria-live="polite" style="display:none; margin-top:0.75rem;"></p>
     </section>
+    <!-- [BARU] Demo Async -->
+    <div style="margin-top:1rem;">
+      <button id="btn-timer" type="button" style="padding:0.55rem 0.9rem;">Coba Timer</button>
+      <p id="timerOutput" style="margin-top:0.75rem; font-style:italic;"></p>
+    </div>
+    <!-- [BARU] Demo Fetch API -->
+    <div style="margin-top:1rem;">
+      <button id="btn-fetch" type="button" style="padding:0.55rem 0.9rem;">Ambil Data</button>
+      <p id="fetchOutput" style="margin-top:0.75rem; font-style:italic;"></p>
+    </div>
     <script>
-    (function(){
-      const input = document.getElementById('username');
-      const btn   = document.getElementById('saveUserBtn');
-      const err   = document.getElementById('errorBox');
+(function(){
+  const input = document.getElementById('username');
+  const btn   = document.getElementById('saveUserBtn');
+  const err   = document.getElementById('errorBox');
 
-      if(!input || !btn || !err) return;
+  if(!input || !btn || !err) return;
 
-      function showError(msg){
-        err.style.display = 'block';
-        err.textContent = msg;
-        err.setAttribute('role','alert');
+  // Saat halaman dibuka, cek apakah ada data tersimpan
+  const savedName = localStorage.getItem("username");
+  if(savedName){
+    input.value = savedName;
+    console.log("Nama yang tersimpan:", savedName);
+  }
+
+  function showError(msg){
+    err.style.display = 'block';
+    err.textContent = msg;
+    err.setAttribute('role','alert');
+  }
+
+  function clearError(){
+    err.textContent = '';
+    err.style.display = 'none';
+    err.removeAttribute('role');
+  }
+
+  // === Error Handling + Storage ===
+  btn.addEventListener('click', () => {
+    console.clear();
+    try {
+      clearError();
+      const value = (input.value || '').trim();
+      if(value === ''){
+        const e = new Error('Nama tidak boleh kosong.');
+        e.name = 'ValidationError';
+        throw e;
       }
+      console.log('Nama valid:', value);
 
-      function clearError(){
-        err.textContent = '';
-        err.style.display = 'none';
-        err.removeAttribute('role');
-      }
+      // SIMPAN ke localStorage
+      localStorage.setItem("username", value);
 
-      btn.addEventListener('click', () => {
-        console.clear();
-        try {
-          clearError();
-          const value = (input.value || '').trim();
-          if(value === ''){
-            const e = new Error('Nama tidak boleh kosong.');
-            e.name = 'ValidationError';
-            throw e;
+      alert(`Halo, ${value}! Namamu sudah tersimpan di localStorage.`);
+    } catch(e){
+      console.warn('Terjadi error:', e.name);
+      showError(e.message);
+    } finally {
+      console.log('Selesai (try/catch/finally).');
+    }
+  });
+
+  // === Async Demo (setTimeout + setInterval) ===
+  const timerBtn = document.getElementById('btn-timer');
+  const timerOut = document.getElementById('timerOutput');
+
+  if(timerBtn && timerOut){
+    timerBtn.addEventListener('click', () => {
+      timerOut.textContent = "Tunggu 3 detik...";
+      
+      // setTimeout = jalan sekali setelah 3 detik
+      setTimeout(() => {
+        timerOut.textContent = "3 detik sudah lewat! Sekarang timer berjalan tiap 1 detik...";
+        
+        let count = 0;
+        const interval = setInterval(() => {
+          count++;
+          timerOut.textContent = `Interval ke-${count}`;
+          if(count >= 5){
+            clearInterval(interval);
+            timerOut.textContent = "Selesai! Timer berhenti setelah 5x.";
           }
-          console.log('Nama valid:', value);
-          alert(`Halo, ${value}! (nanti bisa kita simpan ke storage)`);
-        } catch(e){
-          console.warn('Terjadi error:', e.name);
-          showError(e.message);
-        } finally {
-          console.log('Selesai (try/catch/finally).');
-        }
-      });
-    })();
-    </script>
+        }, 1000);
+      }, 3000);
+    });
+  }
+  // === Fetch API Demo ===
+  const fetchBtn = document.getElementById('btn-fetch');
+  const fetchOut = document.getElementById('fetchOutput');
+
+  if(fetchBtn && fetchOut){
+    fetchBtn.addEventListener('click', async () => {
+      fetchOut.textContent = "Sedang mengambil data...";
+
+      try {
+        // Ambil 1 quote random dari API publik
+        const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+        if(!res.ok) throw new Error("Gagal ambil data dari server");
+        const data = await res.json();
+
+        fetchOut.textContent = `Todo: ${data.title} (status: ${data.completed})`;
+
+      } catch(e){
+        fetchOut.textContent = "Error: " + e.message;
+        console.error(e);
+      } finally {
+        console.log("Fetch selesai (try/catch/finally).");
+      }
+    });
+  }
+
+})(); 
+</script>
 </body>
 </html>
