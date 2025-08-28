@@ -1,0 +1,12 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "Halo! Saya Alvisyahputra, mahasiswa program **Santren Koding**, yang juga bekerja sebagai staff freelance di **Ara Tour and Travel**. Website ini dibuat sebagai bagian dari tugas Project 1 di bootcamp **Santren Koding**.",
+  "main": "script.js",
+    "scripts": {
+      "start": "node src/index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
